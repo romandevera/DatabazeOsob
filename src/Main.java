@@ -9,10 +9,6 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Seznam seznam = new Seznam();
 
-        //String jmeno = scanner.nextLine();
-        //String prijmeni = scanner.nextLine();
-        //String rodneCislo = scanner.nextLine();
-
 
         boolean smycka = false;
 
@@ -31,11 +27,17 @@ public class Main {
                     break;
 
                 case 2:
-                   System.out.println("write the Name, Surename, birth ID");
-                  // seznam.pridatDoSeznamu(Osoba.pridatOsobu(scanner.next(),scanner.next(),scanner.next() ));
-                   seznam.pridatDoSeznamu(Osoba.pridatOsobu(scanner.next(),scanner.next(),scanner.next()));
+                   System.out.println("Napiste jmeno, prijmeni,  rodne cislo");
+                   seznam.pridatDoSeznamu(Osoba.pridatOsobu(scanner.next().toString(),scanner.next().toString(),scanner.next().toString()));
                     break;
 
+                case 3:
+                   seznam.odstrnitZeSeznamu();
+                   break;
+
+                case 4:
+                    seznam.nalezenaOsoba();
+                    break;
             }
         }
     }
@@ -44,6 +46,8 @@ public class Main {
             System.out.println("\t 0 - Konec programu.");
             System.out.println("\t 1 - Tisk seznamu.");
             System.out.println("\t 2 - Pridani zaznamu.");
+            System.out.println("\t 3 - Vymaz zaznamu.");
+            System.out.println("\t 4 - Najit hledany zaznam.");
         }
     }
 

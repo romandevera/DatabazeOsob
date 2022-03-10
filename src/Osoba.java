@@ -4,7 +4,7 @@ public class Osoba {
     private String prijmeni;
     private  String rodneCislo;
 
-    public Osoba (){
+   public Osoba (){
 
     }
 
@@ -14,6 +14,7 @@ public class Osoba {
         this.prijmeni = prijmeni;
         this.rodneCislo = rodneCislo;
     }
+
 
     public String getJmeno() {
         return jmeno;
@@ -28,6 +29,12 @@ public class Osoba {
     }
 
     public static Osoba pridatOsobu (String jmeno, String prijmeni, String rodneCislo){
+
         return new Osoba(jmeno,prijmeni,rodneCislo);
+    }
+
+    @Override
+    public String toString() {
+        return jmeno +" | " +prijmeni +" | "+rodneCislo+ " |";
     }
 }
